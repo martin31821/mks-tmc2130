@@ -1,0 +1,352 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:tmc2130-polulu
+LIBS:druckerfoo-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 9960 950  505  570 
+U 5AA015DA
+F0 "DriverX" 60
+F1 "driver.sch" 60
+F2 "SCK" I L 9960 1105 60 
+F3 "SDI" I L 9960 1190 60 
+F4 "CS" I L 9960 1275 60 
+F5 "SDO" O L 9960 1360 60 
+$EndSheet
+$Sheet
+S 9960 1745 505  450 
+U 5AA07BAF
+F0 "DriverY" 60
+F1 "driver.sch" 60
+F2 "SCK" I L 9960 1800 60 
+F3 "SDI" I L 9960 1880 60 
+F4 "CS" I L 9960 1960 60 
+F5 "SDO" O L 9960 2040 60 
+$EndSheet
+$Sheet
+S 9955 2480 505  570 
+U 5AA08D10
+F0 "DriverZ" 60
+F1 "driver.sch" 60
+F2 "SCK" I L 9955 2635 60 
+F3 "SDI" I L 9955 2720 60 
+F4 "CS" I L 9955 2805 60 
+F5 "SDO" O L 9955 2890 60 
+$EndSheet
+$Sheet
+S 9955 3275 505  450 
+U 5AA08D16
+F0 "DriverE0" 60
+F1 "driver.sch" 60
+F2 "SCK" I L 9955 3330 60 
+F3 "SDI" I L 9955 3410 60 
+F4 "CS" I L 9955 3490 60 
+F5 "SDO" O L 9955 3570 60 
+$EndSheet
+$Sheet
+S 9945 3940 505  450 
+U 5AA092C6
+F0 "DriverE1" 60
+F1 "driver.sch" 60
+F2 "SCK" I L 9945 3995 60 
+F3 "SDI" I L 9945 4075 60 
+F4 "CS" I L 9945 4155 60 
+F5 "SDO" O L 9945 4235 60 
+$EndSheet
+$Comp
+L Conn_01x02 J?
+U 1 1 5AA0FA94
+P 900 1250
+F 0 "J?" H 900 1350 50  0000 C CNN
+F 1 "POWER_IN" H 900 1050 50  0000 C CNN
+F 2 "" H 900 1250 50  0001 C CNN
+F 3 "" H 900 1250 50  0001 C CNN
+	1    900  1250
+	-1   0    0    1   
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 5AA10664
+P 1445 840
+F 0 "#PWR?" H 1445 690 50  0001 C CNN
+F 1 "VCC" H 1445 990 50  0000 C CNN
+F 2 "" H 1445 840 50  0001 C CNN
+F 3 "" H 1445 840 50  0001 C CNN
+	1    1445 840 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 1150 1445 1150
+Wire Wire Line
+	1445 1150 1445 840 
+$Comp
+L GND #PWR?
+U 1 1 5AA10ECC
+P 1445 1560
+F 0 "#PWR?" H 1445 1310 50  0001 C CNN
+F 1 "GND" H 1445 1410 50  0000 C CNN
+F 2 "" H 1445 1560 50  0001 C CNN
+F 3 "" H 1445 1560 50  0001 C CNN
+	1    1445 1560
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 1250 1445 1250
+Wire Wire Line
+	1445 1250 1445 1560
+$Comp
+L CP C?
+U 1 1 5AA111C0
+P 1710 1215
+F 0 "C?" H 1735 1315 50  0000 L CNN
+F 1 "1000µF" H 1735 1115 50  0000 L CNN
+F 2 "" H 1748 1065 50  0001 C CNN
+F 3 "" H 1710 1215 50  0001 C CNN
+	1    1710 1215
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1710 1065 1710 915 
+Wire Wire Line
+	1710 915  1445 915 
+Connection ~ 1445 915 
+Wire Wire Line
+	1710 1365 1710 1465
+Wire Wire Line
+	1710 1465 1445 1465
+Connection ~ 1445 1465
+$Comp
+L SAMD20E17A-AU U?
+U 1 1 5AA13DD3
+P 3050 5950
+F 0 "U?" H 2000 7350 50  0000 C CNN
+F 1 "SAMD20E17A-AU" H 3900 4550 50  0000 C CNN
+F 2 "TQFP32" H 3050 4950 50  0001 C CIN
+F 3 "" H 3050 5950 50  0001 C CNN
+	1    3050 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x05 J?
+U 1 1 5AA14AB7
+P 1055 2355
+F 0 "J?" H 1055 2655 50  0000 C CNN
+F 1 "DEBUG" H 1055 2055 50  0000 C CNN
+F 2 "" H 1055 2355 50  0001 C CNN
+F 3 "" H 1055 2355 50  0001 C CNN
+	1    1055 2355
+	-1   0    0    -1  
+$EndComp
+$Comp
+L VDD #PWR?
+U 1 1 5AA14EAA
+P 1445 1980
+F 0 "#PWR?" H 1445 1830 50  0001 C CNN
+F 1 "VDD" H 1445 2130 50  0000 C CNN
+F 2 "" H 1445 1980 50  0001 C CNN
+F 3 "" H 1445 1980 50  0001 C CNN
+	1    1445 1980
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1255 2155 1445 2155
+Wire Wire Line
+	1445 2155 1445 1980
+$Comp
+L GND #PWR?
+U 1 1 5AA1549F
+P 1445 2695
+F 0 "#PWR?" H 1445 2445 50  0001 C CNN
+F 1 "GND" H 1445 2545 50  0000 C CNN
+F 2 "" H 1445 2695 50  0001 C CNN
+F 3 "" H 1445 2695 50  0001 C CNN
+	1    1445 2695
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1445 2695 1445 2555
+Wire Wire Line
+	1445 2555 1255 2555
+Text HLabel 1255 2255 2    60   3State ~ 0
+RST
+Text HLabel 1255 2355 2    60   3State ~ 0
+SWCLK
+Text HLabel 1255 2455 2    60   3State ~ 0
+SWDIO
+$Comp
+L GND #PWR?
+U 1 1 5AA165BE
+P 1255 6195
+F 0 "#PWR?" H 1255 5945 50  0001 C CNN
+F 1 "GND" H 1255 6045 50  0000 C CNN
+F 2 "" H 1255 6195 50  0001 C CNN
+F 3 "" H 1255 6195 50  0001 C CNN
+	1    1255 6195
+	1    0    0    -1  
+$EndComp
+Text HLabel 1800 4700 0    60   3State ~ 0
+RST
+$Comp
+L C C?
+U 1 1 5AA18894
+P 1000 5915
+F 0 "C?" H 1025 6015 50  0000 L CNN
+F 1 "100n" H 1025 5815 50  0000 L CNN
+F 2 "" H 1038 5765 50  0001 C CNN
+F 3 "" H 1000 5915 50  0001 C CNN
+	1    1000 5915
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5AA192DD
+P 1255 5915
+F 0 "C?" H 1280 6015 50  0000 L CNN
+F 1 "100n" H 1280 5815 50  0000 L CNN
+F 2 "" H 1293 5765 50  0001 C CNN
+F 3 "" H 1255 5915 50  0001 C CNN
+	1    1255 5915
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5AA19459
+P 1510 5915
+F 0 "C?" H 1535 6015 50  0000 L CNN
+F 1 "100n" H 1535 5815 50  0000 L CNN
+F 2 "" H 1548 5765 50  0001 C CNN
+F 3 "" H 1510 5915 50  0001 C CNN
+	1    1510 5915
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1510 5535 1510 5765
+Wire Wire Line
+	1510 5600 1800 5600
+Wire Wire Line
+	1255 5765 1255 5250
+Wire Wire Line
+	1255 5250 1800 5250
+Wire Wire Line
+	1000 5015 1000 5765
+Wire Wire Line
+	1000 5100 1800 5100
+$Comp
+L VDD #PWR?
+U 1 1 5AA198F0
+P 1510 5535
+F 0 "#PWR?" H 1510 5385 50  0001 C CNN
+F 1 "VDD" H 1510 5685 50  0000 C CNN
+F 2 "" H 1510 5535 50  0001 C CNN
+F 3 "" H 1510 5535 50  0001 C CNN
+	1    1510 5535
+	1    0    0    -1  
+$EndComp
+Connection ~ 1510 5600
+$Comp
+L VDD #PWR?
+U 1 1 5AA19CD9
+P 1000 5015
+F 0 "#PWR?" H 1000 4865 50  0001 C CNN
+F 1 "VDD" H 1000 5165 50  0000 C CNN
+F 2 "" H 1000 5015 50  0001 C CNN
+F 3 "" H 1000 5015 50  0001 C CNN
+	1    1000 5015
+	1    0    0    -1  
+$EndComp
+Connection ~ 1000 5100
+Wire Wire Line
+	1255 6195 1255 6065
+Wire Wire Line
+	1000 6065 1000 6130
+Wire Wire Line
+	745  6130 1510 6130
+Wire Wire Line
+	1510 6130 1510 6065
+Connection ~ 1255 6130
+$Comp
+L GND #PWR?
+U 1 1 5AA1B4A7
+P 1665 7335
+F 0 "#PWR?" H 1665 7085 50  0001 C CNN
+F 1 "GND" H 1665 7185 50  0000 C CNN
+F 2 "" H 1665 7335 50  0001 C CNN
+F 3 "" H 1665 7335 50  0001 C CNN
+	1    1665 7335
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1665 7100 1665 7335
+Wire Wire Line
+	1665 7200 1800 7200
+Wire Wire Line
+	1665 7100 1800 7100
+Connection ~ 1665 7200
+$Comp
+L C C?
+U 1 1 5AA1BB84
+P 745 5915
+F 0 "C?" H 770 6015 50  0000 L CNN
+F 1 "1µ" H 770 5815 50  0000 L CNN
+F 2 "" H 783 5765 50  0001 C CNN
+F 3 "" H 745 5915 50  0001 C CNN
+	1    745  5915
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	745  6065 745  6130
+Connection ~ 1000 6130
+Wire Wire Line
+	745  5765 745  5665
+Wire Wire Line
+	745  5665 1000 5665
+Connection ~ 1000 5665
+Text HLabel 4300 7200 2    60   3State ~ 0
+SWDIO
+Text HLabel 4300 7100 2    60   3State ~ 0
+SWCLK
+$EndSCHEMATC
