@@ -32,6 +32,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:tmc2130-polulu
+LIBS:tps54531
 LIBS:druckerfoo-cache
 EELAYER 25 0
 EELAYER END

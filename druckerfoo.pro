@@ -1,4 +1,4 @@
-update=Mi 07 Mär 2018 17:06:54 CET
+update=So 11 Mär 2018 20:19:47 CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -62,3 +62,4 @@ LibName30=atmel
 LibName31=contrib
 LibName32=valves
 LibName33=tmc2130-polulu
+LibName34=tps54531
